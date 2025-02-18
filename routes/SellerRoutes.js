@@ -3,7 +3,7 @@ const Seller = require('../models/Seller');
 const { sendEmail } = require("../config/emailConfig");
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const bcrypt=require('bcrypt');
+const bcrypt=require('bcryptjs');
 
 const {generateOTP,sendemail} = require("../utils/sendOTP")
 
