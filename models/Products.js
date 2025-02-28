@@ -5,7 +5,7 @@ const productSchema = new mongoose.Schema({
     description: { type: String, required: true },
     price: { type: Number, required: true },
     category: { type: String, required: true },
-    quantity: { type: Number, required: true },
+    quantity: { type: String, required: true },
     seller: { type: mongoose.Schema.Types.ObjectId, ref: "Seller", required: true },
     imageurl: { type: String, required: true } // ✅ Ensure this field is included
 }, { timestamps: true });

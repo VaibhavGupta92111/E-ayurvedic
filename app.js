@@ -5,10 +5,12 @@ const cors=require('cors')
 
 
 const routes = require("./routes/userRoutes");
-// const PaymentRoutes = require("./routes/paymentRoutes");
+
 const Sellerroutes = require("./routes/SellerRoutes");
 const ProductRoutes = require("./routes/ProductRoutes"); // Ensure correct relative path
-const OrderRoutes = require("./routes/OrderRoutes");
+ const OrderRoutes = require("./routes/OrderRoutes");
+// const payment = require("./routes/PaymentRoute")
+
 
 require ('dotenv').config();
 
@@ -27,8 +29,8 @@ app.get('/',(req,res)=>
 app.use('/api',routes);//today
 app.use('/api',Sellerroutes);//today
 app.use('/api',ProductRoutes); //today
- app.use('/api',OrderRoutes); //today
-//  app.use("api",PaymentRoutes);
+app.use('/api',OrderRoutes); //today
+// app.use('/api',payment);
 app.listen(3000,()=>
 {
     console.log("server is running on the port 3000");

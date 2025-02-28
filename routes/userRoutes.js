@@ -40,7 +40,7 @@ const emailResult = await sendEmail(mailOptions);
     }
     catch(error)
     {
-res.status(500).json({message:"Error creating User",error});
+res.status(500).json({message:"Error creating User",error:error.message});
     }
 });
 
