@@ -66,7 +66,9 @@ router.post("/products", upload.single("image"), async (req, res) => {
 // ✅ Route 2: Get All Products
 router.get("/home_Products", async (req, res) => {
     try {
-        const products = await Product.find();
+        const products = await Product.find()
+        .populate("seller", "store_name") // ✅ Populate seller's store_name
+        .exec();
         res.status(200).json({ products });
     } catch (error) {
         res.status(500).json({ message: "Error fetching products", error: error.message });
