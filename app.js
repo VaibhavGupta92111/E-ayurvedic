@@ -31,8 +31,8 @@ app.use('/api',Sellerroutes);//today
 app.use('/api',ProductRoutes); //today
 app.use('/api',OrderRoutes); //today
 // app.use('/api',payment);
-app.listen(3000,()=>
+app.listen(3005,()=>
 {
-    console.log("server is running on the port 3000");
+    console.log("server is running on the port 3005");
     
 })
